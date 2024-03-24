@@ -20,38 +20,40 @@
 </head>
 
 <body>
+  <div class="wraper">
   <header>
     <div class="section-header">
-      <div class="logo-menu">
+      <div class="webstudio-menu">
         <div class="logo-webstudio">
-          <a href="index.html" target="_parent"><img src="assets/logo.svg" alt="logo-webstudio"></a>
+          <img src="assets/logo.svg" alt="logo-webstudio">
         </div>
-        <div>
-          <img src="assets/menu.svg" alt="menu" class="burger-menu">
-        </div>
-       </div>
-        <div class="container global-header ">
-        <nav class="nav">
-          <ul class="nav-list">
-            <li>
-              <a href="index.html" target="_self" class="active">Studio</a>
-            </li>
-
-            <li>
-              <a href="portofolio.html" target="_self">Portofolio</a>
-            </li>
-
-            <li>
-              <a href="index.html" target="_self">Contact</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="contact">
-          <a href="mailto:info@devstudio.com" class="item-contact">info@devstudio.com</a>
-          <a href="tel:+11(000)111-11-11" class="item-contact">+11(000)111-11-11</a>
+        <div class="burger-menu">
+          <img src="assets/menu.svg" alt="button open menu">
         </div>
       </div>
-    </div>
+
+        <div class="container global-header ">
+          <nav class="nav">
+            <ul class="nav-list">
+              <li>
+                <a href="index.html" target="_self" class="active">Studio</a>
+              </li>
+
+              <li>
+                <a href="portofolio.html" target="_self">Portofolio</a>
+              </li>
+
+              <li>
+                <a href="index.html" target="_self">Contact</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="contact">
+            <a href="mailto:info@devstudio.com" class="item-contact">info@devstudio.com</a>
+            <a href="tel:+11(000)111-11-11" class="item-contact">+11(000)111-11-11</a>
+          </div>
+        </div>
+      </div>
   </header>
   <main>
     <div class="hero-image ">
@@ -67,7 +69,6 @@
     <div class="modal is-hidden" data-modal>
       <div class="modal-content">
         <button type="button" class="close-btn" data-modal-close>&times;</button>
-
         <form>
           <h2>Leave your contacts and we will call you back</h2>
           <div class="form">
@@ -117,8 +118,8 @@
                 <use href="./assets/symbol-defs1.svg#icon-antenna"></use>
               </svg>
             </div>
-            <h2 class="title-skils">Strategy</h2>
-            <p>Our goal is to identify the business
+            <h2 class="title skils">Strategy</h2>
+            <p class="text-skils">Our goal is to identify the business
               problem to walk away with the perfect and creative solution. </p>
           </li>
 
@@ -128,7 +129,7 @@
                 <use href="./assets/symbol-defs1.svg#icon-clock"></use>
               </svg>
             </div>
-            <h2 class="title-skils">Punctuality</h2>
+            <h2 class="title skils">Punctuality</h2>
             <p class="text-skils">Bring the key message to the brand's audience for the best price within the shortest
               possible time.</p>
           </li>
@@ -139,7 +140,7 @@
                 <use href="assets/symbol-defs1.svg#icon-diagram"></use>
               </svg>
             </div>
-            <h2 class="title-skils">Diligence</h2>
+            <h2 class="title skils">Diligence</h2>
             <p class="text-skils">Research and confirm brands that present the strongest digital growth opportunities
               and minimize risk.</p>
           </li>
@@ -150,7 +151,7 @@
                 <use href="assets/symbol-defs1.svg#icon-astronaut"></use>
               </svg>
             </div>
-            <h2 class="title-skils">Technologies</h2>
+            <h2 class="title skils">Technologies</h2>
             <p class="text-skils">Design practice focused on digital experiences. We bring forth a deep passion for
               problem-solving.</p>
           </li>
@@ -158,14 +159,12 @@
       </div>
     </section>
     <!--section images-->
-    <section class="section images">
-      <div class="container">
-        <h2 class="title">What are we doing</h2>
+    <section class="section-images">
+      <div class="container-image">
+        <h2 class="title title-doing">What are we doing</h2>
         <ul class="list-img">
           <li>
             <img src="assets/imag1.jpg" alt="imagine-interfata-calculator">
-          </li>
-
           <li>
             <img src="assets/imag2.jpg" alt="imagine-interfata-mobil">
           </li>
@@ -184,6 +183,7 @@
           <li>
             <div class="photo">
               <img src="assets/photo1.jpg" alt=" photo Mark Guerrero">
+              
               <div class="card-content">
                 <h3>Mark Guerrero</h3>
                 <p>Product Designer</p>
@@ -431,8 +431,10 @@
       </div>
     </div>
   </footer>
+  <!-- script  -->
+ 
+  <script src="js/modal.js"></script>
+</div>
 </body>
-<script src="js/modal.js"></script>
-
 
 </html>
