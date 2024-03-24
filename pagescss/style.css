@@ -36,7 +36,8 @@ ul {
   list-style-type: none;
 }
 
-.section {
+/* styles nav*/
+.section-header {
   display: flex;
   justify-content: center;
 }
@@ -45,7 +46,8 @@ ul {
   width: 1200px;
 }
 
-/* styles nav*/
+
+
 .global-header {
   display: flex;
   justify-content: space-between;
@@ -89,7 +91,9 @@ a {
 .item-contact:hover {
   color: var(--ocean);
 }
-
+.global-header {
+  display: none;
+}
 /* styles hero index*/
 .hero-image {
   display: flex;
@@ -222,7 +226,7 @@ a {
   transition: color var(--transition)
 }
 
- svg:hover {
+svg:hover {
   color: var(--iris);
 }
 
@@ -576,4 +580,66 @@ a {
 
 .img-project:hover .overlay {
   height: 100%;
+}
+
+/* Styling for tablet*/
+@media screen and (min-width: 768px) {}
+
+/* Styling for desktop*/
+@media screen and (min-width: 1200px) {
+  .burger-menu {
+    display: none;
+  }
+  .section-header {
+    display: flex;
+    justify-content: center;
+  }
+
+  .container {
+    width: 1200px;
+  }
+
+  .global-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .global-header .nav-list {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .global-header .nav-list a:hover {
+    color: var(--ocean);
+    border-bottom: var(--ocean);
+  }
+
+  a {
+    transition: color var(--transition);
+  }
+
+  .nav-list a {
+    color: var(--light-slate);
+    font-size: medium;
+    text-decoration: none;
+    margin-right: 30px;
+  }
+
+  .global-header a.active {
+    color: var(--ocean);
+    padding-bottom: 15px;
+    border-bottom: solid 4px;
+  }
+
+  .conact,
+  .item-contact {
+    color: var(--slate);
+    text-decoration: none;
+    padding-right: 10px;
+  }
+
+  .item-contact:hover {
+    color: var(--ocean);
+  }
 }
