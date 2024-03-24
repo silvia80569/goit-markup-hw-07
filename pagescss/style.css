@@ -35,70 +35,38 @@ body {
 ul {
   list-style-type: none;
 }
+ img {
+  max-width: 100%;
+ }
 
 /* styles nav*/
-.section-header {
+
+.logo-menu {
   display: flex;
-  justify-content: center;
-}
-
-.container {
-  width: 1200px;
-}
-
-
-
-.global-header {
-  display: flex;
-  justify-content: space-between;
+  justify-content:space-between;
   align-items: center;
+  margin-left:  1.5rem;;
+  margin-right: 1.5rem;
+  height:70px ;
+}
+.logo-webstudio {
+  height:2.5rem;
+}
+.burger-menu {
+  width: 2rem;
 }
 
-.global-header .nav-list {
-  display: flex;
-  justify-content: flex-end;
-}
 
-.global-header .nav-list a:hover {
-  color: var(--ocean);
-  border-bottom: var(--ocean);
-}
-
-a {
-  transition: color var(--transition);
-}
-
-.nav-list a {
-  color: var(--light-slate);
-  font-size: medium;
-  text-decoration: none;
-  margin-right: 30px;
-}
-
-.global-header a.active {
-  color: var(--ocean);
-  padding-bottom: 15px;
-  border-bottom: solid 4px;
-}
-
-.conact,
-.item-contact {
-  color: var(--slate);
-  text-decoration: none;
-  padding-right: 10px;
-}
-
-.item-contact:hover {
-  color: var(--ocean);
-}
 .global-header {
   display: none;
 }
 /* styles hero index*/
+
 .hero-image {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
   padding: 94px;
   height: 500px;
   background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
@@ -313,27 +281,13 @@ svg:hover {
 }
 
 /* styles skils index*/
-.list-skils {
-  width: 1200px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  color: var(--navy-blue);
-  padding: 94px 0px;
-}
 
 .item-skils svg {
   width: 64px;
   height: 64px;
 }
-
 .svg-skils {
-  background-color: var(--cloud);
-  width: 264px;
-  height: 112px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: none;
 }
 
 .text-skils {
@@ -581,65 +535,81 @@ svg:hover {
 .img-project:hover .overlay {
   height: 100%;
 }
-
-/* Styling for tablet*/
-@media screen and (min-width: 768px) {}
-
-/* Styling for desktop*/
-@media screen and (min-width: 1200px) {
-  .burger-menu {
-    display: none;
+ /* Styling fot tablet*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    background-color: red;
   }
-  .section-header {
+  .skils {
     display: flex;
-    justify-content: center;
   }
+}
+ /* Styling for desktop */
+ @media screen and (min-width: 1025px) {
+    body {
+        background-color: blue;
+ }
+ 
+ .global-header {
+   display: flex;
+   justify-content: center;
+   gap: 10px;
+   padding-right: 20px;
+ }
 
-  .container {
-    width: 1200px;
-  }
+.nav-list {
+  display: flex;
+}
 
-  .global-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+ .global-header .nav-list a:hover {
+   color: var(--ocean);
+   border-bottom: var(--ocean);
+ }
 
-  .global-header .nav-list {
-    display: flex;
-    justify-content: flex-end;
-  }
+ a {
+   transition: color var(--transition);
+ }
 
-  .global-header .nav-list a:hover {
-    color: var(--ocean);
-    border-bottom: var(--ocean);
-  }
+ .nav-list a {
+   color: var(--light-slate);
+   font-size: medium;
+   text-decoration: none;
+   margin-right: 30px;
+ }
 
-  a {
-    transition: color var(--transition);
-  }
+ .global-header a.active {
+   color: var(--ocean);
+   border-bottom: solid 4px;
+ }
 
-  .nav-list a {
-    color: var(--light-slate);
-    font-size: medium;
-    text-decoration: none;
-    margin-right: 30px;
-  }
+ 
+ .conact,
+ .item-contact {
+   color: var(--slate);
+   text-decoration: none;
+   padding-right: 20px;
+ }
 
-  .global-header a.active {
-    color: var(--ocean);
-    padding-bottom: 15px;
-    border-bottom: solid 4px;
-  }
-
-  .conact,
-  .item-contact {
-    color: var(--slate);
-    text-decoration: none;
-    padding-right: 10px;
-  }
-
-  .item-contact:hover {
-    color: var(--ocean);
-  }
+ .item-contact:hover {
+   color: var(--ocean);
+ }
+ .burger-menu {
+  display: none;
+ }
+ .svg-skils {
+   background-color: var(--cloud);
+   width: 264px;
+   height: 112px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+ .list-skils {
+  width: 100vw;
+   display: flex;
+   justify-content: space-between;
+   gap:20px;
+   color: var(--navy-blue);
+   padding: 94px 0px;
+ }
 }
