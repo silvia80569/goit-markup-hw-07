@@ -54,8 +54,33 @@ img {
 a {
   text-decoration: none;
 }
+.nav {
+  display: none;
+}
+.js-menu-container {
+  display: none;
+}
+.js-menu-container.is-open{
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  height: 100vh;
+  width: 80%;
+}
+.js-close-menu {
+  border: none;
+  background: none;
+  align-self: self-end;
+
+}
 
 /*styling header*/
+
+/*
 .header {
   display: flex;
 
@@ -74,7 +99,7 @@ a {
   
   visibility: hidden;
   position: absolute;*/
-
+/*
   top: 0;
   right: 0;
   bottom: 0;
@@ -96,6 +121,7 @@ a {
   text-decoration: none;
   color: var(--ocean);
 }
+
 
 /* styles hero index*/
 .hero-image {
@@ -639,8 +665,8 @@ svg:hover {
     padding: 2rem;
   }
 
-  .cerar-menu,
-  .abrir-menu {
+  .js-open-menu,
+  .js-close-menu {
     display: none;
   }
 
