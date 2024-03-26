@@ -42,38 +42,62 @@ body {
 }
 
 ul {
-  list-style-type: none;
+  list-style: none;
+
 }
- img {
+
+img {
   display: block;
   max-width: 100%;
   height: auto;
- }
+}
+a {
+  text-decoration: none;
+}
 
-/* styles nav*/
-
-.webstudio-menu {
+/*styling header*/
+.header {
   display: flex;
-  justify-content:space-between;
-  align-items: center;
-  margin-left:  1.5rem;;
-  margin-right: 1.5rem;
-  height:70px ;
-}
-.logo-webstudio {
-  height:2.5rem;
+
+  justify-content: space-between;
+  padding: 2rem;
 }
 
-.burger-menu {
+.cerar-menu,
+.abrir-menu {
   height: 2.5rem;
+  display: block;
 }
 
+.nav {
+  /* opacity: 0;
+  
+  visibility: hidden;
+  position: absolute;*/
 
-.global-header {
-  display: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 2rem;
+  background-color: red;
 }
+
+.nav.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-list {
+  list-style-type: none;
+  gap: 1rem;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: var(--ocean);
+}
+
 /* styles hero index*/
-
 .hero-image {
   display: flex;
   align-items: center;
@@ -296,11 +320,11 @@ svg:hover {
 }
 
 /* styles skils index*/
-
 .item-skils svg {
   width: 4rem;
   height: 4rem;
 }
+
 .svg-skils {
   display: none;
 }
@@ -312,12 +336,35 @@ svg:hover {
   line-height: 1.7;
 }
 
+.our-team {
+  background-color: var(--cloud);
+  padding: 5.87rem 0rem;
+}
+
+.header-our-team {
+  margin-bottom: 5rem;
+}
+
+
+.photo {
+  border: none;
+  background-color: var(--white);
+  box-shadow: 5px 5px 8px 1px rgba(143, 144, 180, 0.4);
+  text-align: center;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
 
 /*styles img index*/
 .list-img {
   display: none;
 
 }
+
 .title-doing {
   display: none;
 }
@@ -347,7 +394,6 @@ svg:hover {
 }
 
 /* customers*/
-
 .customers {
   padding: 5.87rem 0rem;
 }
@@ -371,6 +417,7 @@ svg:hover {
   border: var(--slate) solid;
   border-radius: 5%;
 }
+
 .list-icons-costumers {
   display: grid;
   grid-template-columns: repeat(2, 1fr)
@@ -559,116 +606,120 @@ svg:hover {
 .img-project:hover .overlay {
   height: 100%;
 }
- /* Styling fot tablet*/
+
+/* Styling fot tablet*/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   body {
     background-color: red;
   }
-  .list-skils ,
+
+  .list-skils,
   .list-photo {
     display: grid;
-    grid-template-columns:repeat(2,1fr) ;
+    grid-template-columns: repeat(2, 1fr);
   }
-   .list-icons-costumers {
+
+  .list-icons-costumers {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-   }
+    grid-template-columns: repeat(3, 1fr);
+  }
 
 }
- /* Styling for desktop */
- @media screen and (min-width: 1025px) {
-    body {
-        background-color: blue;
- }
- 
- .global-header {
-   display: flex;
-   justify-content: center;
-   gap: 10px;
-   padding-right: 20px;
- }
 
-.nav-list {
-  display: flex;
+/* Styling for desktop */
+@media screen and (min-width:1024px) {
+  body {
+    background-color: blue;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+
+  .cerar-menu,
+  .abrir-menu {
+    display: none;
+  }
+
+  .nav {
+    display: block;
+  }
+
+  .nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+  }
+
+
+
+
+  .nav-list a:hover {
+    color: var(--ocean);
+    border-bottom: var(--ocean);
+  }
+
+  a {
+    transition: color var(--transition);
+  }
+
+  .nav-list a {
+    color: var(--light-slate);
+    font-size: medium;
+    text-decoration: none;
+    margin-right: 30px;
+  }
+
+  /* Styling skils*/
+  .svg-skils {
+    background-color: var(--cloud);
+    width: 264px;
+    height: 112px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .list-skils {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    color: var(--navy-blue);
+    padding: 94px 0px;
+  }
+
+  .list-img {
+    display: flex;
+    justify-content: space-between;
+    padding: 5.87rem 0prem;
+  }
+
+  .list-photo {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .list-icons-costumers {
+    display: flex;
+    gap: 24px;
+  }
+
+  .icons-costumers svg {
+    width: 104px;
+    height: 56px;
+  }
+
+  .icons-costumers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 168px;
+    height: 88px;
+    border: var(--slate) solid;
+    border-radius: 5%;
+  }
 }
-
- .global-header .nav-list a:hover {
-   color: var(--ocean);
-   border-bottom: var(--ocean);
- }
-
- a {
-   transition: color var(--transition);
- }
-
- .nav-list a {
-   color: var(--light-slate);
-   font-size: medium;
-   text-decoration: none;
-   margin-right: 30px;
- }
-
- .global-header a.active {
-   color: var(--ocean);
-   border-bottom: solid 4px;
- }
-
- 
- .conact,
- .item-contact {
-   color: var(--slate);
-   text-decoration: none;
-   padding-right: 20px;
- }
-
- .item-contact:hover {
-   color: var(--ocean);
- }
- .burger-menu {
-  display: none;
- }
- .svg-skils {
-   background-color: var(--cloud);
-   width: 264px;
-   height: 112px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
- }
- .list-skils {
-  width: 100vw;
-   display: flex;
-   justify-content: space-between;
-   gap:20px;
-   color: var(--navy-blue);
-   padding: 94px 0px;
- }
- .list-img {
-   display: flex;
-   justify-content: space-between;
-   padding: 5.87rem 0prem;
- }
- .list-photo {
-   display: flex;
-   justify-content: space-evenly;
-}
-.list-icons-costumers {
-  display: flex;
-  gap: 24px;
-}
-
-.icons-costumers svg {
-  width: 104px;
-  height: 56px;
-}
-
-.icons-costumers {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 168px;
-  height: 88px;
-  border: var(--slate) solid;
-  border-radius: 5%;
-}
- }
