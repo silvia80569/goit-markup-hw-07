@@ -18,6 +18,7 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {
@@ -33,7 +34,7 @@ body {
   font-family: var(--font-family);
   font-size: 2.2rem;
   line-height: 1;
-  padding-top:3rem;
+  padding-top: 3rem;
 }
 
 ul {
@@ -42,6 +43,7 @@ ul {
 }
 
 img {
+  display: block;
   max-width: 100%;
   height: auto;
 }
@@ -53,7 +55,7 @@ a {
 .header-mobil {
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 2rem;
 
 }
 
@@ -79,8 +81,6 @@ a {
   font-family: var(--second-family);
 
 }
-
-
 
 .js-open-menu {
   background-color: var(--white);
@@ -136,10 +136,12 @@ a {
 a {
   transition: color var(--transition);
 }
+
 .nav-list-navgation a.active {
   color: var(--ocean);
   border-color: var(--ocean);
 }
+
 .nav a.active {
   color: var(--ocean);
 }
@@ -407,6 +409,7 @@ svg:hover {
   font-size: 1rem;
   font-weight: 600;
   line-height: 2;
+  padding-right: 10%;
 }
 
 
@@ -439,10 +442,10 @@ svg:hover {
 }
 
 .list-photo {
+  /*
   display: flex;
   flex-direction: column;
-  align-items: center;
-
+  align-items: center;*/
 }
 
 .photo {
@@ -474,13 +477,13 @@ svg:hover {
   height: 88px;
   border: var(--slate) solid;
   border-radius: 5%;
+  padding-right: 20%;
 }
 
 .list-icons-costumers {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .list-icons-costumers:hover,
@@ -604,9 +607,13 @@ svg:hover {
 
 /* styles projects portofolio*/
 .list-projects-portofolio {
+  /*
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1.7rem;
   padding: 5.87rem 0rem;
 }
 
@@ -729,7 +736,8 @@ svg:hover {
   .modal-content {
     width: 50%;
   }
-/* Styling hero image for tablet*/
+
+  /* Styling hero image for tablet*/
   .hero-image {
     height: 436px;
     background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
@@ -738,16 +746,24 @@ svg:hover {
   }
 
   /* Styling skils for tablet*/
-  .list-skils,
-  .list-photo {
+  .list-skils {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap:1rem;
+    gap: 1rem;
+  }
+    .list-photo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3.5rem;
   }
 
   .list-icons-costumers {
+    /*
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(3, 1fr);*/
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
   }
 
   /* Styling photo for tablet */
@@ -757,28 +773,32 @@ svg:hover {
 
   /* Styling footer for tablet */
 
-.footer-item {
-  display: flex;
-  margin-right: 20%;
-}
-.form-subscribe {
-  flex-direction: row; 
-}
+  .footer-item {
+    display: flex;
+    margin-right: 20%;
+  }
 
-.title-footer {
-  margin-top: 0px;
-} 
-.label-subscribe {
-  margin-right: 30px;
-}
-.label-email {
-  margin-left: 9%;
-  margin-bottom:2.5rem;
-}
-.label-submit {
-  margin-left:9%;
-  margin-top: 1rem;
-}
+  .form-subscribe {
+    flex-direction: row;
+  }
+
+  .title-footer {
+    margin-top: 0px;
+  }
+
+  .label-subscribe {
+    margin-right: 30px;
+  }
+
+  .label-email {
+    margin-left: 9%;
+    margin-bottom: 2.5rem;
+  }
+
+  .label-submit {
+    margin-left: 9%;
+    margin-top: 1rem;
+  }
 }
 
 /* Styling for desktop */
@@ -829,7 +849,7 @@ svg:hover {
     gap: 2rem;
     color: var(--navy-blue);
     margin-left: 30%;
-    margin-top:1rem;
+    margin-top: 1rem;
   }
 
   .item-contact {
@@ -868,22 +888,23 @@ svg:hover {
     padding: 94px 10px;
   }
 
- /* Styling image for desktop*/
+  /* Styling image for desktop*/
   .list-img {
     display: flex;
     justify-content: space-around;
     padding: 5.87rem 0rem;
   }
- /* Styling sction our team for desktop */
+
+  /* Styling sction our team for desktop */
   .list-photo {
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-around;
   }
 
   /* Styling section customers for desktop*/
   .list-icons-costumers {
-    display:flex;
+    display: flex;
     justify-content: space-around;
   }
 
@@ -909,20 +930,22 @@ svg:hover {
     gap: 5rem;
   }
 
-.footer-item {
- display: flex;
+  .footer-item {
+    display: flex;
 
-}
-.social-media-footer {
-  margin-left: 7rem;
-}
+  }
 
-.form-subscribe {
-  flex-direction: row;
-  gap: 4rem;
-}
-.button-subscribe {
-  margin-top: 30%;
-}
+  .social-media-footer {
+    margin-left: 7rem;
+  }
+
+  .form-subscribe {
+    flex-direction: row;
+    gap: 4rem;
+  }
+
+  .button-subscribe {
+    margin-top: 30%;
+  }
 
 }
