@@ -441,13 +441,6 @@ svg:hover {
   margin-top: 10px;
 }
 
-.list-photo {
-  /*
-  display: flex;
-  flex-direction: column;
-  align-items: center;*/
-}
-
 .photo {
   border: none;
   background-color: var(--white);
@@ -607,9 +600,6 @@ svg:hover {
 
 /* styles projects portofolio*/
 .list-projects-portofolio {
-  /*
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);*/
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
