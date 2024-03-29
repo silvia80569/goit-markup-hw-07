@@ -164,6 +164,7 @@ a {
 .item-contact-email {
   color: var(--navy-blue);
   padding-bottom: 2rem;
+  font-weight: 600;
 
 }
 
@@ -455,7 +456,7 @@ svg:hover {
   flex-direction: column;
 }
 
-/* customers*/
+/* customers for index */
 .customers {
   padding: 5.87rem 0rem;
 }
@@ -564,9 +565,10 @@ svg:hover {
 /* section button portofolio*/
 .list-button {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
-  padding-top: 94px;
+  gap:2.3rem;
+  padding-top:5.8rem;
 }
 
 .button {
@@ -691,7 +693,8 @@ svg:hover {
     list-style-type: none;
     display: flex;
     gap: 1rem;
-
+    margin-top: 10%;
+  
   }
 
   .nav-list a:hover {
@@ -705,10 +708,9 @@ svg:hover {
 
   .nav-list a {
     color: var(--slate);
-    font-size: medium;
-    font-weight: 500;
+    font-size: large;
+    font-weight: 600;
     text-decoration: none;
-    margin-left: 20%;
   }
 
   .contact {
@@ -815,6 +817,7 @@ svg:hover {
     list-style-type: none;
     display: flex;
     gap: 2rem;
+    margin-top: 10%;
 
   }
 
@@ -829,9 +832,9 @@ svg:hover {
 
   .nav-list a {
     color: var(--slate);
-    font-size: medium;
+    font-size: large;
     text-decoration: none;
-    margin-right: 20%;
+    font-weight: 600;
   }
 
   .contact {
