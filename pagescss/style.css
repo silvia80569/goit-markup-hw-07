@@ -90,6 +90,8 @@ a {
 }
 
 .js-close-menu {
+  width: 2rem;
+  height: 2rem;
   border: none;
   background: none;
   align-self: self-end;
@@ -128,12 +130,18 @@ a {
 
 .nav-list-navgation a:hover {
   color: var(--ocean);
-  border-bottom: var(--ocean);
   font-weight: 600;
 }
 
 a {
   transition: color var(--transition);
+}
+.nav-list-navgation a.active {
+  color: var(--ocean);
+  border-color: var(--ocean);
+}
+.nav a.active {
+  color: var(--ocean);
 }
 
 
