@@ -31,6 +31,12 @@ body {
 
 a {
   text-decoration: none;
+  color: var(--navy-blue);
+  cursor: pointer;
+}
+
+a:hover {
+  color: var(--ocean);
 }
 
 ul {
@@ -56,8 +62,12 @@ ul {
   margin-bottom: 40px;
 }
 
-/* === STYLING MENU CONTAINER === */
-/* Stiluri comune pentru butoane și navigație */
+.active {
+  color: var(--iris);
+}
+
+/* === MENU CONTAINER === */
+
 .global-header {
   display: none;
 }
@@ -106,7 +116,6 @@ ul {
   fill: var(--navy-blue);
 }
 
-/* Stiluri pentru meniul mobil */
 .js-menu-container {
   margin: auto;
 }
@@ -157,7 +166,6 @@ ul {
   color: var(--cloud);
 }
 
-/* Stiluri pentru link-uri și navigație */
 .nav-list-navigation {
   display: flex;
   flex-direction: column;
@@ -166,7 +174,7 @@ ul {
 }
 
 .nav-list-navigation a {
-  color: var(--navy-blue);
+  color: var(--slate);
   font-size: 1.5rem;
   font-weight: 700;
   text-decoration: none;
@@ -183,7 +191,6 @@ ul {
   border-bottom: 2px solid var(--ocean);
 }
 
-/* Stiluri pentru contact */
 .contact-navigation {
   display: flex;
   flex-direction: column;
@@ -202,7 +209,7 @@ ul {
   font-weight: 600;
 }
 
-/* Stiluri pentru header mobil */
+/* === HEADER MOBIL === */
 .header-mobil {
   display: flex;
   justify-content: space-between;
@@ -221,7 +228,6 @@ ul {
   background-color: var(--white);
   color: var(--navy-blue);
 }
-
 
 /* === HERO STYLES === */
 .hero {
@@ -586,53 +592,10 @@ textarea::placeholder {
 }
 
 /* === STYLES FOOTER === */
-/*footer {
-  background-color: var(--navy-blue);
-  color: var(--cloud);
-  padding: 40px 20px;
-}
-
-.footer-flex {
-  display: flex;
-  gap: 20%;
-  flex-wrap: wrap;
-}
-
-.footer-content {
-  max-width: 264px;
-  flex: 1;
-}
-
-.footer-content .blue {
-  color: var(--iris);
-  font-size: var(--font-size-base);
-  font-weight: 700;
-}
-
-.footer-content .cloud {
-  color: var(--cloud);
-  font-size: var(--font-size-base);
-  font-weight: 700;
-}
-
-.text-footer p {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-  letter-spacing: 0.02em;
-  color: var(--cloud);
-  margin-top: 10px;
-}
-
-.social-media {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}*/
-footer {
+.footer {
   background-color: var(--navy-blue);
   color: var(--white);
-  padding: 40px 0;
+  padding: 40px;
 }
 
 .footer-flex {
@@ -641,6 +604,7 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 40px;
+  margin: 24px;
 }
 
 .footer-content .blue {
@@ -669,7 +633,7 @@ footer {
 
 .icons-list {
   display: flex;
-  gap: 16px;
+  gap: 24px;
 }
 
 .icons {
@@ -692,11 +656,12 @@ footer {
 .icons:hover {
   background-color: var(--ocean);
 }
+
 .subscribe {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 16px;
-  max-width: 100%;
 }
 
 .form-subscribe {
@@ -739,12 +704,13 @@ footer {
   fill: var(--white);
 }
 
+/* ============== PORTFOLIO ============== */
 /* === SECTION BUTTONS PORTFOLIO === */
 .list-button {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  padding-top: 94px;
+  gap: 10px;
+  padding-top: 40px;
 }
 
 .button {
@@ -752,7 +718,7 @@ footer {
   color: var(--ocean);
   border: none;
   border-radius: 5%;
-  width: 116px;
+  width: 100px;
   height: 48px;
 }
 
@@ -776,12 +742,12 @@ footer {
   cursor: pointer;
 }
 
-/* === STYLES  PROJECTS  PORTFOLIO  === */
+/* === PROJECTS  PORTFOLIO  === */
 .list-projects-portofolio {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 20px;
-  padding: 94px 0px;
+  padding: 40px 0px;
 }
 
 .list-item-img {
@@ -806,16 +772,18 @@ footer {
 }
 
 .text-img-portofolio {
-  margin-left: 5%;
+  padding: 16px;
 }
 
-/* === STYLES  OVERLAY === */
+/* === OVERLAY === */
 .img-project {
   position: relative;
 }
 
 .img-project img {
-  background-size: cover;
+  width: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 .overlay {
@@ -843,18 +811,18 @@ footer {
   height: 100%;
 }
 
-/* === MEDIAQUERI === */
+/* ============== MEDIAQUERIS ==================== */
 
 /* === TABLET === */
 
 @media screen and (min-width: 768px) {
 
+  /* == HEADER TABLET ==*/
   .header-mobil {
     display: none;
   }
 
   .global-header {
-    background-color: brown;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -872,7 +840,7 @@ footer {
     gap: 5px;
   }
 
-
+  /* == HERO TABLET == */
   .hero {
     padding: 60px 40px;
   }
@@ -881,7 +849,7 @@ footer {
     font-size: 1.75rem;
   }
 
-
+  /* == SECTIONS: OUR TEAM TABLET == */
   .card-svg {
     display: none;
   }
@@ -912,11 +880,40 @@ footer {
   .list-icons-costumers {
     grid-template-columns: repeat(3, 1fr);
   }
-    .form-subscribe {
-      flex-direction: row;
-      align-items: center;
-    }
 
+  /* == FOOTER TABLET ==*/
+  .footer-flex {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .subscribe {
+    align-items: flex-start;
+    margin: 24px;
+  }
+
+  .form-subscribe {
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .footer-input {
+    max-width: 250px;
+    margin-right: 12px;
+  }
+
+  /* == PROJECTS  PORTFOLIO  == */
+  .list-projects-portofolio {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .button {
+    width: 116px;
+    height: 48px;
+  }
 }
 
 /* === DESKTOP === */
@@ -928,7 +925,6 @@ footer {
   }
 
   .global-header {
-    background-color: #4d5ae5;
     font-size: var(--second-family);
     display: flex;
     padding: 20px;
@@ -1042,5 +1038,43 @@ footer {
 
   .list-icons-costumers {
     grid-template-columns: repeat(6, 1fr);
+  }
+
+  .footer {
+    padding: 100px 156px;
+  }
+
+  .footer-flex {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 120px;
+    margin: 0;
+  }
+
+  .form-subscribe {
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .footer-content,
+  .social-media,
+  .subscribe {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .footer-input {
+    max-width: 264px;
+  }
+
+  .text-footer p {
+    font-size: 16px;
+  }
+
+  /* == PROJECTS  PORTFOLIO  == */
+  .list-projects-portofolio {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
